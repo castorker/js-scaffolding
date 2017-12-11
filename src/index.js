@@ -1,6 +1,18 @@
 import './index.css';
-import numeral from 'numeral';
+import {getQuibbles} from './api/quibbleApi';
 
-const bitcoinValue = numeral(14186.07).format('€0,0.00');
-// debugger;
-console.log(`1 Bitcoin equals ${bitcoinValue} Euro at ${new Date(Date.now()).toLocaleString()}`); // eslint-disable-line no-console
+// Populate table of quibbles via API call.
+getQuibbles().then(result => {
+  let quibblesBody = "";
+
+  result.forEach(quibble => {
+    quibblesBody += `<tr>
+      <td><a href="#" data-id="${quibble.id}" class="deleteQuibble">Delete</a></td>
+      <td>${quibble.id}</td>
+      <td>${quibble.category}</td>
+      <td>${quibble.text}</td>
+      </tr>`
+  });
+
+  global.document.getElementById('quibbles').innerHTML = quibblesBody;
+});
