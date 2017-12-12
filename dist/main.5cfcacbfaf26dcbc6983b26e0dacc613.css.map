@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///src/index.css"],"names":[],"mappings":"AAAA,KACE,qDAA6D,CAG/D,SACE,WAAY","file":"main.5cfcacbfaf26dcbc6983b26e0dacc613.css","sourcesContent":["body {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n}\n\ntable th {\n  padding: 5px\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///src/index.css\n **/"],"sourceRoot":""}
